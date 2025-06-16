@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Customer Purchases</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 20px;
+            text-align:center;
+        }
+        h1 {
+            text-align: center;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            text-align:center;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        .car-section {
+            display: flex;
+            align-items: center;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        .car-name {
+            font-weight: bold;
+            width: 20%;
+            text-align: center;
+        }
+        .units-sold {
+            font-weight: bold;
+            font-size: 24px;
+            width: 10%;
+            text-align: center;
+        }
+        .form-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .form-section label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+            text-align:center;
+        }
+        .form-section input {
+            width: 300px;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        .hint {
+            font-size: 12px;
+            color: gray;
+            margin-bottom: 10px;
+        }
+        label{
+            display:inline-block;
+            width:200px;
+            font-weight:bold;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="date"]{
+            width:60%;
+            padding:5px;
+        }
+        
+        
+
+    </style>
+    </head>
+    <body>
+        <h1> customer Purhases </h1>
+
+        <div class="car-section">
+            <div class="car-name" rowspan="4">Honda City  </div>
+            <table border="1">
+                <tr>
+                    <th> color </th>
+                    <th> Units </th>
+                </tr>
+                <tr> 
+                    <td> Blue </td>
+                    <td> 24 </td>
+                </tr>
+                <tr>
+                    <td> Black </td>
+                    <td> 24 </td>
+                </tr>
+                <tr>
+                    <td> white </td>
+                    <td> 35 </td>
+                </tr>
+            </table>
+            <div class="units-sold">83</div>
+        </div>
+
+<div class="car-section">
+            <div class="car-name" rowspan="4">Honda civic </div>
+            <table rowspan="4">
+                <tr>
+                    <th> color </th>
+                    <th> Units </th>
+                </tr>
+                <tr> 
+                    <td> Blue </td>
+                    <td> 24 </td>
+                </tr>
+                <tr>
+                    <td> Black </td>
+                    <td> 24 </td>
+                </tr>
+                <tr>
+                    <td> white </td>
+                    <td> 35 </td>
+                </tr>
+            </table>
+            <div class="units-sold">83</div>
+        </div>  
+        
+        <div class="car-section">
+            <div class="car-name">Honda Elevate </div>
+            <table rowspan="4">
+                <tr>
+                    <th> color </th>
+                    <th> Units </th>
+                </tr>
+                <tr> 
+                    <td> Blue </td>
+                    <td> 24 </td>
+                </tr>
+                <tr>
+                    <td> Black </td>
+                    <td> 24 </td>
+                </tr>
+                <tr>
+                    <td> white </td>
+                    <td> 35 </td>
+                </tr>
+            </table>
+            <div class="units-sold">83</div>
+        </div> 
+          <form onsubmit="validateForm(event)">
+        <div class="form-section">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="must be greater than 10" /><br>
+             
+            <label for="units">Number of units sold</label>
+            <input type="Number" id="units" placeholder="Number must be higher than 25 less than 100"/><br>
+
+            <label for="model">Model</label>
+            <input type="text" id="model" placeholder="must be either civic,city or elevate" /><br>
+
+            <label for="date">Date</label>
+            <input type="date" id="date" placeholder="Must be in june 2025" /><br>
+
+            <input type="submit" Value="Submit" />
+        </div>
+        </form>
+        <script>
+    function validateForm(elevate) {
+      const name = document.getElementById("name").value.trim();
+      const units = parseInt(document.getElementById("units").value);
+      const model = document.getElementById("model").value.trim().toLowerCase();
+      const date = new Date(document.getElementById("date").value);
+
+      if (name.length <= 10) {
+        alert("Name must be greater than 10 characters");
+        return false;
+      }
+
+      if (isNaN(units) || units <= 25 || units >= 100) {
+        alert("Units sold must be more than 25 and less than 100");
+        return false;
+      }
+
+      if (!["civic", "city", "elevate"].includes(model)) {
+        alert("Model must be either civic, city, or elevate");
+        return false;
+      }
+
+      if (!(date.getFullYear() === 2025 && date.getMonth() === 5)) {
+        alert("Date must be in June 2025");
+        return false;
+      }
+
+      alert("Form is submitted");
+      return true;
+    }
+  </script>
+    </body>
+    </html>
+    

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Customer Purchases</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        .car-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        .car-name {
+            font-weight: bold;
+            width: 20%;
+            text-align: center;
+        }
+        .units-sold {
+            font-weight: bold;
+            font-size: 24px;
+            width: 10%;
+            text-align: center;
+        }
+        .form-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .form-section label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .form-section input {
+            width: 300px;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        .hint {
+            font-size: 12px;
+            color: gray;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Customer Purchases</h1>
+
+    <div class="car-section">
+        <div class="car-name">Honda City</div>
+        <table>
+            <tr>
+                <th>Color</th>
+                <th>Units</th>
+            </tr>
+            <tr>
+                <td>Blue</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>Black</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>White</td>
+                <td>35</td>
+            </tr>
+        </table>
+        <div class="units-sold">83</div>
+    </div>
+
+    <div class="car-section">
+        <div class="car-name">Honda Civic</div>
+        <table>
+            <tr>
+                <th>Color</th>
+                <th>Units</th>
+            </tr>
+            <tr>
+                <td>Blue</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>Black</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>White</td>
+                <td>35</td>
+            </tr>
+        </table>
+        <div class="units-sold">83</div>
+    </div>
+
+    <div class="car-section">
+        <div class="car-name">Honda Elevate</div>
+        <table>
+            <tr>
+                <th>Color</th>
+                <th>Units</th>
+            </tr>
+            <tr>
+                <td>Blue</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>Black</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>White</td>
+                <td>35</td>
+            </tr>
+        </table>
+        <div class="units-sold">83</div>
+    </div>
+
+    <div class="form-section">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="must be greater than 10" />
+        
+        <label for="units">Number of units sold</label>
+        <input type="number" id="units" placeholder="number must be higher than 25 less than 100" />
+         
+        <label for="Model">Model</label>
+        <input type="text" id="Model" placeholder="must be either civic,city or elevate" />
+
+        <label for="Date">Date</label>
+        <input type="number" id="Date" placeholder="Must be in june 2025" /><br>
+         
+        <input type="submit" value="submit">
+    </div>
+
+</body>
+</html>
