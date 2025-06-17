@@ -6,11 +6,79 @@
     <title>Blog</title>
     <style>
         body{
+            background-color: aqua;
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
-            padding:10px;
+            padding:2px;
             font-family:bold;
+            width:100% ;
+            max-width: 50cm;
+            
+            
         }
+        .container{
+            width:450px;
+            background-color: white;
+            padding:20px;
+            margin: 0 auto;
+            box-sizing: 0 0 5px rgba (0,0,0,0.5);
+        }
+        .container p{
+            line-height: 1.4;
+            text-align: justify;
+            margin-bottom: 50px;
+        }
+        #check{
+            display:none;
+        }
+        .content{
+            display:none;
+            transition: 0.5s linear;
+        }
+        .content1{
+            display:none;
+            transition: 0.5s linear;
+        }
+        label{
+            display: inline-block;
+            margin-top: 15px;
+            color: blue;
+            text-decoration:underline;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        label{
+            display: inline-block;
+            margin-top: 15px;
+            color: blue;
+            text-decoration:underline;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        #check:checked ~.content{
+            display: block;
+        }
+         #check:checked ~.content{
+            display: block;
+        }
+        #check:checked ~ label{
+            visibility: hidden;
+        }
+        #check:checked ~ label{
+            visibility: hidden;
+            display:none;
+        }
+        #check:checked ~label::after{
+            content:Read Less;
+            display:block;
+            visibility: visible;
+        } 
+        #check:checked ~ label::after{
+            content:Read Less;
+            display:block;
+            visibility: visible;
+        }
+        
         h1{
             text-align: center;
             font-family: bold;
@@ -21,25 +89,52 @@
     </style>
 </head>
 <body>
-   <section> <h1> Blog </h1>
-    <img src="everest-peak.jpg" width="30%"><br> 
-    <article> Blog Post One<br>
-        june 15,2025<br>
-        Lorem ipsum dolor sit amet, consect:etur adipiscing ellt,
-sed do eiusmod tempor incididunt ut labore et dolore ma..
-    </article>
-
- <a href="Read More"> Read More</a><br>
- </section>
+    <div class="container">
+        <input type="checkbox" id="check">
+  <h1> Blog </h1>
+    <img src="everest-peak.jpg" width="70%"><br> 
+     Blog Post One<br>
+       <aside> june 15,2025</aside><br>
+    <p>Mount Everest, the world's highest peak, stands at 8,849 meters (29,032 feet).<br> 
+    Located in the Himalayas, on the border between Nepal and Tibet, 
+    it's known as Sagarmatha in Nepal 
+    and Chomolungma in Tibet. First summited in 1953...</p>
+     <div class="content">
+        <p>
+Located in the Himalayas, on the border between Nepal and Tibet, 
+    it's known as Sagarmatha in Nepal usually supporting branches and leaves. In some usages, 
+    the definition of a tree may be narrower
+        </p>
+     </div>  
+     <label for="check">Read More</label><br><br> 
+     </div>
+ 
    
-
-   <img src="download (2).jpeg" width="30%"><br>
-   <article> Blog Post Two<br>
+<div class="container">
+        <input type="checkbox" id="check">
+   <img src="download (2).jpeg" width="69%"><br>
+   Blog Post Two<br>
     June 15,2025<br>
-    Lorem ipsum dolor sit amet, consect:etur adipiscing elit,
-sed do eiusmod tempor incididunt ut labore et dolore ma..
-</article>
-<a href="Read More">Read More</a>
+   <p> A tree is a perennial plant with an elongated stem, or trunk,<br> 
+    usually supporting branches and leaves. In some usages, 
+    the definition of a tree may be narrower, 
+    e.g., including only woody plants with secondary growth, 
+    only plants that are usable as lumber, or only plants</p> 
+
+<div class="content">
+        <p>
+Located in the Himalayas, on the border between Nepal and Tibet, 
+    it's known as Sagarmatha in Nepal usually supporting branches and leaves. In some usages, 
+    the definition of a tree may be narrower
+        </p>
+     </div>  
+     <label for="check">Read More</label><br><br> 
+     </div>
+
+  
+
+
+
 
     
 </body>

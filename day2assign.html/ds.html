@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Read More Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 50px auto;
+    }
+
+    .more-content {
+      display: none;
+      color: #333;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-    Welcome to My Web page:'HELLO WORLD'
+
+  <h2>Product Overview</h2>
+  <p>
+    Our product simplifies your workflow and boosts productivity.
+    <span class="more-content" id="moreText">
+      It comes with features like real-time collaboration, analytics, and automation to handle complex tasks with ease. Designed for teams of all sizes, it helps you deliver faster results and maintain high-quality standards.
+    </span>
+  </p>
+
+  <button onclick="toggleReadMore()" id="readMoreBtn">Read More</button>
+
+  <script>
+    function toggleReadMore() {
+      var moreText = document.getElementById("moreText");
+      var btn = document.getElementById("readMoreBtn");
+
+      if (moreText.style.display === "inline") {
+        moreText.style.display = "none";
+        btn.innerText = "Read More";
+      } else {
+        moreText.style.display = "inline";
+        btn.innerText = "Read Less";
+      }
+    }
+  </script>
+
 </body>
 </html>
